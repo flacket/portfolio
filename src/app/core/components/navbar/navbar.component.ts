@@ -10,16 +10,7 @@ import { Component, signal } from '@angular/core';
   },
 })
 export class NavbarComponent {
-  isMenuOpen = signal(false);
   isScrolled = signal(false);
-
-  toggleMenu() {
-    this.isMenuOpen.update((val) => !val);
-  }
-
-  closeMenu() {
-    this.isMenuOpen.set(false);
-  }
 
   onWindowScroll() {
     this.isScrolled.set(window.scrollY > 50);
@@ -28,6 +19,5 @@ export class NavbarComponent {
   scrollToTop(event: Event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    this.closeMenu();
   }
 }

@@ -1,22 +1,11 @@
 <nav id="navbar" class="navbar" [class.scrolled]="isScrolled()">
   <div class="nav-container">
     <a href="#" (click)="scrollToTop($event)" class="nav-logo">&lt;FacundoGallardo/&gt;</a>
-
-    <button
-      class="mobile-menu-toggle"
-      id="mobile-menu-toggle"
-      (click)="toggleMenu()"
-      aria-label="Toggle menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <ul class="nav-menu" id="nav-menu" [class.active]="isMenuOpen()">
-      <li><a href="#about" class="nav-link" (click)="closeMenu()">Sobre Mí</a></li>
-      <li><a href="#projects" class="nav-link" (click)="closeMenu()">Proyectos</a></li>
-      <li><a href="#contact" class="nav-link" (click)="closeMenu()">Contacto</a></li>
+    <a href="#" (click)="scrollToTop($event)" class="nav-logo-mobile">&lt;FG/&gt;</a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+      <li><a href="#projects" class="nav-link">Proyectos</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
     </ul>
   </div>
 </nav>
