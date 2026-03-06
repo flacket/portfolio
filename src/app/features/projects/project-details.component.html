@@ -1,0 +1,64 @@
+<div class="container project-details-container">
+  <div class="project-details">
+    <!-- Close Button acting as back button -->
+    <a routerLink="/" fragment="projects" class="close-details" aria-label="Cerrar detalles">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </a>
+
+    @if (projectData(); as data) {
+      <div class="details-content">
+        <div class="details-header">
+          <h3>{{ data.title }}</h3>
+          <div class="project-tags">
+            @for (tag of data.tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+          <p class="project-overview">{{ data.overview }}</p>
+        </div>
+
+        @for (feature of data.features; track feature.title) {
+          <!-- Feature detail -->
+          <div
+            class="detail-section"
+            [class.layout-left]="feature.layout === 'left'"
+            [class.layout-right]="feature.layout === 'right'"
+          >
+            <div class="detail-text">
+              <h4>{{ feature.title }}</h4>
+              <p>{{ feature.description }}</p>
+            </div>
+            <!-- Mock images from real projects usually, falling back to a dummy empty tag or default if missing -->
+            <div class="detail-image">
+              @if (feature.mediaType === 'video') {
+                <video autoplay loop muted class="detail-video">
+                  <source [src]="feature.media" type="video/mp4" />
+                </video>
+              } @else {
+                <img [src]="feature.media" [alt]="feature.title" class="detail-image" />
+              }
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="details-not-found">
+        <h3>Proyecto no encontrado</h3>
+        <a routerLink="/" class="btn btn-primary">Volver al inicio</a>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title fade-in" appFadeIn>Proyectos Destacados</h2>
+    <p class="section-subtitle fade-in" appFadeIn>Algunos de mis trabajos más recientes</p>
+
+    <div class="projects-grid">
+      @for (project of projects(); track project.id) {
+        <article class="project-card fade-in" appFadeIn [routerLink]="['/project', project.id]">
+          <div class="project-image">
+            <img [ngSrc]="project.imageUrl" width="400" height="225" [alt]="project.title" />
+            <div class="project-overlay">
+              <button class="expand-btn" aria-label="Ver detalles" tabindex="-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="project-description">
+              {{ project.description }}
+            </span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

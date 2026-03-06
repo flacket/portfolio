@@ -1,0 +1,27 @@
+<section id="home" class="hero">
+  <div class="hero-background">
+    <div class="gradient-orb orb-1" [style.transform]="orb1Transform()"></div>
+    <div class="gradient-orb orb-2" [style.transform]="orb2Transform()"></div>
+    <div class="gradient-orb orb-3" [style.transform]="orb3Transform()"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-greeting fade-in" appFadeIn>Hola, Soy Facundo</p>
+    <h1 class="hero-name fade-in" appFadeIn>Front-End Engineer</h1>
+    <h2 class="hero-title fade-in" appFadeIn>
+      <span class="typing-text">{{ displayedText() }}</span>
+      <span class="cursor">|</span>
+    </h2>
+    <p class="hero-description fade-in" appFadeIn>
+      Creando soluciones web modernas y funcionales con código limpio y diseño innovador.
+    </p>
+    <div class="hero-buttons fade-in" appFadeIn>
+      <a href="#projects" class="btn btn-primary"> Ver Proyectos </a>
+      <a href="#contact" class="btn btn-secondary"> Contáctame </a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>

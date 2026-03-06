@@ -1,0 +1,60 @@
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title fade-in" appFadeIn>¡Trabajemos Juntos!</h2>
+    <p class="section-subtitle fade-in" appFadeIn>¿Tienes un proyecto en mente? Hablemos.</p>
+
+    <div class="contact-content fade-in" appFadeIn>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" formControlName="name" required placeholder="Tu nombre" />
+          @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+            <span class="error-msg">El nombre es requerido</span>
+          }
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            required
+            placeholder="tu@email.com"
+          />
+          @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+            <span class="error-msg">Ingresa un correo válido</span>
+          }
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            required
+            placeholder="¿Cómo puedo ayudarte?"
+          ></textarea>
+          @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+            <span class="error-msg">El mensaje es requerido</span>
+          }
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-submit"
+          [disabled]="status() === 'sending'"
+        >
+          {{ status() === 'sending' ? 'Enviando...' : 'Enviar Mensaje' }}
+        </button>
+
+        @if (status() === 'success') {
+          <div class="form-status success">¡Mensaje enviado con éxito! Te responderé pronto.</div>
+        }
+        @if (status() === 'error') {
+          <div class="form-status error">
+            Hubo un error al enviar el mensaje. Intenta nuevamente.
+          </div>
+        }
+      </form>
+    </div>
+  </div>
+</section>
