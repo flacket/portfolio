@@ -3,9 +3,19 @@
     <a href="#" (click)="scrollToTop($event)" class="nav-logo">&lt;FacundoGallardo/&gt;</a>
     <a href="#" (click)="scrollToTop($event)" class="nav-logo-mobile">&lt;FG/&gt;</a>
     <ul class="nav-menu" id="nav-menu">
-      <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-      <li><a href="#projects" class="nav-link">Proyectos</a></li>
-      <li><a href="#contact" class="nav-link">Contacto</a></li>
+      <li>
+        <a href="#about" class="nav-link" [class.active]="activeSection() === 'about'">Sobre Mí</a>
+      </li>
+      <li>
+        <a href="#projects" class="nav-link" [class.active]="activeSection() === 'projects'"
+          >Proyectos</a
+        >
+      </li>
+      <li>
+        <a href="#contact" class="nav-link" [class.active]="activeSection() === 'contact'"
+          >Contacto</a
+        >
+      </li>
     </ul>
   </div>
 </nav>
