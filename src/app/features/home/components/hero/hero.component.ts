@@ -1,14 +1,4 @@
-import {
-  Component,
-  PLATFORM_ID,
-  inject,
-  signal,
-  computed,
-  effect,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, signal, OnDestroy, OnInit } from '@angular/core';
 import { FadeInDirective } from '../../../../shared/directives/fade-in.directive';
 
 @Component({
@@ -21,8 +11,6 @@ import { FadeInDirective } from '../../../../shared/directives/fade-in.directive
   },
 })
 export class HeroComponent implements OnInit, OnDestroy {
-  private platformId = inject(PLATFORM_ID);
-
   // Parallax signals
   orb1Transform = signal('translate(0px, 0px)');
   orb2Transform = signal('translate(0px, 0px)');
@@ -39,9 +27,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   private typingTimeout: any;
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.typingTimeout = setTimeout(() => this.typeText(), 1000);
-    }
+    this.typingTimeout = setTimeout(() => this.typeText(), 1000);
   }
 
   ngOnDestroy() {
@@ -51,8 +37,6 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   onMouseMove(e: MouseEvent) {
-    if (!isPlatformBrowser(this.platformId)) return;
-
     const calculateTransform = (index: number) => {
       const speed = (index + 1) * 20;
       const x = ((window.innerWidth / 2 - e.pageX) * speed) / 1000;
@@ -66,8 +50,6 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private typeText() {
-    if (!isPlatformBrowser(this.platformId)) return;
-
     const currentString = this.textArray[this.textArrayIndex];
     let typingDelay = 100;
 
