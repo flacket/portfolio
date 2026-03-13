@@ -53,59 +53,50 @@ export class ProjectDetailsComponent implements OnInit {
       ],
     },
     '2': {
-      title: 'E-commerce Platform',
+      title: 'Venenosos San Juan',
       overview:
-        'Plataforma de comercio electrónico moderna, rápida y segura, diseñada para maximizar la conversión.',
-      tags: ['Angular', 'PrimeNG', 'Typescript', 'Google Maps API', 'Supabase', 'PostgreSQL'],
+        'Esta aplicación móvil nació en el marco de un proyecto de extensión de la Universidad Nacional de San Juan. Es una herramienta integral diseñada para mitigar los accidentes con fauna ponzoñosa en la provincia.\n\nEl sistema combina la divulgación científica con la ciencia ciudadana, permitiendo a los usuarios identificar especies, acceder a protocolos de primeros auxilios y reportar avistamientos. La interfaz está optimizada para ser utilizada por trabajadores rurales, estudiantes, docentes y personal de enfermería.\n\nLa aplicación transforma el smartphone en una herramienta de educación ambiental, promoviendo un cambio en la percepción social de la fauna local y fortaleciendo la prevención comunitaria. En sus primeras semanas fue descargada por más de 1300 usuarios, con una calificación de 4.9 estrellas en la',
+      tags: ['Flutter', 'Supabase', 'PostgreSQL', 'Github'],
       features: [
         {
-          title: 'Experiencia de Compra Fluida',
+          title: 'Identificación y Catálogo Multimedia',
           description:
-            'Integración perfecta con Stripe para pagos seguros y un flujo de checkout optimizado que reduce el abandono del carrito en un 30%.',
-          img: 'assets/project2-detail1.png',
+            'La aplicación permite a los usuarios distinguir de forma rápida y precisa entre especies de importancia médica y aquellas inofensivas mediante fichas técnicas claras y comparativas visuales.\n\nUno de los mayores retos fue garantizar que la aplicación fuera funcional en zonas rurales o de montaña, donde la conectividad es nula o inestable. \n\nPara ello, implementamos una estrategia de almacenamiento local (caché/SQLite) que descarga y sincroniza el catálogo de especies. Esto permite que el usuario acceda a información vital sin depender de una conexión a internet.',
+          mediaType: 'image',
+          media: 'assets/venenosos/lista.jpg',
           layout: 'left',
         },
         {
-          title: 'Visualización de Datos en Tiempo Real',
+          title: 'Sistema de Reporte (Ciencia Ciudadana)',
           description:
-            'Implementé un sistema de dashboards interactivos que permite a los usuarios visualizar métricas clave de negocio en tiempo real. Utilicé Chart.js para crear gráficos dinámicos y responsivos que se actualizan automáticamente con nuevos datos.',
-          img: 'assets/granja/dashboard.mp4',
+            'El módulo de Ciencia Ciudadana requiere enviar datos y fotos de avistamientos de los usuarios al servidor, lo cual es imposible sin señal.\n\nSe desarrolló un sistema de cola de tareas. Cuando un usuario registra un animal sin conexión, el reporte se guarda localmente; una vez que el dispositivo detecta una conexión estable, la app sincroniza automáticamente los datos pendientes en segundo plano.',
+          mediaType: 'image',
+          media: 'assets/venenosos/form.jpg',
           layout: 'right',
         },
         {
-          title: 'Gestión de Clientes y Creación de Tickets',
+          title: 'Protocolos de Emergencia y Prevención',
           description:
-            'La Gestion de Clientes permite crear y modificar los datos personales, realizar busqueda con filtros para encontrar rapidamente los clientes deudores, tambien permite crear tickets de compra y pago de deudas, los cuales se entregan al cliente de forma impresa como comprobante de compra.',
-          img: 'assets/granja/clientes.mp4',
+            'La aplicación funciona como una guía de bolsillo para primeros auxilios. Incluye instrucciones paso a paso sobre cómo actuar ante una picadura o mordedura y, mediante la ubicación del usuario, ayuda a localizar el centro de salud más cercano, optimizando los tiempos de atención médica.',
+          mediaType: 'image',
+          media: 'assets/venenosos/menu.jpg',
           layout: 'left',
         },
       ],
     },
     '3': {
-      title: 'Fitness Tracker App',
-      overview: 'Tu compañero personal de salud y bienestar, directamente en tu bolsillo.',
-      tags: ['Angular', 'PrimeNG', 'Typescript', 'Google Maps API', 'Supabase', 'PostgreSQL'],
+      title: 'SIAP Veladero',
+      overview:
+        'Sistema de gestión de recursos, obligaciones y permisos ambientales en una empresa minera.',
+      tags: ['Vue', 'Bootstrap', 'HTML', 'CSS'],
       features: [
         {
-          title: 'Seguimiento Preciso',
+          title: 'Detalles del Desarrollo',
           description:
-            'Sincronización con dispositivos wearables gracias a una integración robusta con varias APIs de salud, ofreciendo un panorama completo de tu actividad diaria.',
-          img: 'assets/project3-detail1.png',
-          layout: 'left',
-        },
-        {
-          title: 'Visualización de Datos en Tiempo Real',
-          description:
-            'Implementé un sistema de dashboards interactivos que permite a los usuarios visualizar métricas clave de negocio en tiempo real. Utilicé Chart.js para crear gráficos dinámicos y responsivos que se actualizan automáticamente con nuevos datos.',
-          img: 'assets/granja/dashboard.mp4',
-          layout: 'right',
-        },
-        {
-          title: 'Gestión de Clientes y Creación de Tickets',
-          description:
-            'La Gestion de Clientes permite crear y modificar los datos personales, realizar busqueda con filtros para encontrar rapidamente los clientes deudores, tambien permite crear tickets de compra y pago de deudas, los cuales se entregan al cliente de forma impresa como comprobante de compra.',
-          img: 'assets/granja/clientes.mp4',
-          layout: 'left',
+            'Estructuré la interfaz de usuario para un sistema de gestión de recursos en una empresa del sector minero, adaptando un sistema access basado en ventanas a una interfaz web moderna y responsive.\n\nDesarrollé las pantallas de gestión de permisos ambientales, asegurando el cumplimiento de los flujos de trabajo.',
+          mediaType: 'video',
+          media: 'assets/veladero/features.mp4',
+          layout: 'center',
         },
       ],
     },

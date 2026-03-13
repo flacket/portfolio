@@ -25,23 +25,23 @@ export class ProjectsComponent {
       description:
         'sistema integral (web y Android) para la gestión logística de clientes, pedidos, empleados y sucursales.',
       imageUrl: 'assets/granja/logo.jpg',
-      tags: ['React', 'D3.js', 'Node.js'],
+      tags: ['Angular', 'PrimeNG', 'Typescript', 'Google Maps API', 'Supabase', 'PostgreSQL'],
     },
     {
       id: '2',
-      title: 'E-commerce Platform',
+      title: 'Venenosos San Juan',
       description:
-        'Plataforma de comercio electrónico completa con carrito de compras y pasarela de pago.',
-      imageUrl: 'assets/project2.png',
-      tags: ['Angular', 'NgRx', 'Stripe'],
+        'Aplicación móvil que permite identificar arañas, escorpiones y serpientes de importancia médica en la provincia de San Juan.',
+      imageUrl: 'assets/venenosos/logo.jpg',
+      tags: ['Flutter', 'Supabase', 'PostgreSQL', 'Github'],
     },
     {
       id: '3',
-      title: 'Fitness Tracker App',
+      title: 'SIAP Veladero',
       description:
-        'Aplicación móvil para seguimiento de actividad física con gráficos en tiempo real.',
-      imageUrl: 'assets/project3.png',
-      tags: ['Flutter', 'Firebase', 'Chart.js'],
+        'Sistema de gestión de recursos, obligaciones y permisos ambientales en una empresa minera.',
+      imageUrl: 'assets/veladero/logo.jpg',
+      tags: ['Vue', 'Bootstrap', 'HTML', 'CSS'],
     },
   ]);
 }

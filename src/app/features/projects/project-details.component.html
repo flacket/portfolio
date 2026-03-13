@@ -27,7 +27,17 @@
               <span class="tag">{{ tag }}</span>
             }
           </div>
-          <p class="project-overview">{{ data.overview }}</p>
+          <p class="project-overview">
+            {{ data.overview }}
+            @if (data.title === 'Venenosos San Juan') {
+              <a
+                href="https://play.google.com/store/apps/details?id=com.venenosossj.app"
+                target="_blank"
+                style="color: var(--color-accent-primary); font-weight: 700"
+                >Play Store.</a
+              >
+            }
+          </p>
         </div>
 
         @for (feature of data.features; track feature.title) {
@@ -36,13 +46,14 @@
             class="detail-section"
             [class.layout-left]="feature.layout === 'left'"
             [class.layout-right]="feature.layout === 'right'"
+            [class.layout-center]="feature.layout === 'center'"
           >
             <div class="detail-text">
               <h4>{{ feature.title }}</h4>
               <p>{{ feature.description }}</p>
             </div>
             <!-- Mock images from real projects usually, falling back to a dummy empty tag or default if missing -->
-            <div class="detail-image">
+            <div>
               @if (feature.mediaType === 'video') {
                 <video autoplay loop muted class="detail-video">
                   <source [src]="feature.media" type="video/mp4" />
