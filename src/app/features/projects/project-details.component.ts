@@ -37,7 +37,7 @@ export class ProjectDetailsComponent implements OnInit {
         {
           title: 'Visualización de Datos en Tiempo Real',
           description:
-            'Implementé un sistema de dashboards interactivos que permite a los usuarios visualizar métricas clave de negocio en tiempo real. Utilicé Chart.js para crear gráficos dinámicos y responsivos que se actualizan automáticamente con nuevos datos.',
+            'El cliente necesitaba una forma de controlar la flota de vehiculos en tiempo real, para ello se implemento un dashboard que permitia visualizar la posicion GPS actual de los vehiculos.\n\nPara lograrlo cada vehiculo se equipó con un dispositivo android y un aplicativo que envía la posicion GPS actual del vehiculo a la base de datos.',
           mediaType: 'image',
           media: 'assets/granja/rutas.jpg',
           layout: 'right',

@@ -4,6 +4,6 @@ import { ProjectDetailsComponent } from './features/projects/project-details.com
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'project/:id', component: ProjectDetailsComponent },
+  { path: 'projects/:id', component: ProjectDetailsComponent },
   { path: '**', redirectTo: '' },
 ];

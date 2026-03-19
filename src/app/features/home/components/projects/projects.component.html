@@ -5,7 +5,7 @@
 
     <div class="projects-grid">
       @for (project of projects(); track project.id) {
-        <article class="project-card fade-in" appFadeIn [routerLink]="['/project', project.id]">
+        <article class="project-card fade-in" appFadeIn [routerLink]="['/projects', project.id]">
           <div class="project-image">
             <img [ngSrc]="project.imageUrl" width="400" height="225" [alt]="project.title" />
             <div class="project-overlay">
